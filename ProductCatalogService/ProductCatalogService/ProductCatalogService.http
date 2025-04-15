@@ -1,0 +1,13 @@
+@ProductCatalogService_HostAddress = http://localhost:5143
+
+GET {{ProductCatalogService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+GET {{ProductCatalogService_HostAddress}}/weatherforecast/1
+Accept: application/json
+###
+GET {{ProductCatalogService_HostAddress}}/weatherforecast/1
+Accept: application/json
+###
+
