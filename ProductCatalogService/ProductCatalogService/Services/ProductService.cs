@@ -22,6 +22,10 @@ namespace ProductCatalogService.Services
         public async Task<List<Product>> GetAsync() => await _products.Find(_ => true).ToListAsync();
 
         public async Task<Product?> GetAsync(string id) => await _products.Find(p => p.Id == id).FirstOrDefaultAsync();
+        public async Task<Product> GetProductByIdAsync(string id)
+        {
+            return await _products.Find(p => p.Id == id).FirstOrDefaultAsync();
+        }
 
         public async Task CreateAsync(Product product) => await _products.InsertOneAsync(product);
 
